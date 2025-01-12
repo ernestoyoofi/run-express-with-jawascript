@@ -13,5 +13,6 @@
     }
   ],
   "installCommand": "npm install",
-  "buildCommand": "npm run build && cp ./output ./.vercel/output"
+  "buildCommand": "npm run build && cp ./output ./.vercel/output",
+  "outputDirectory": "./output"
 }

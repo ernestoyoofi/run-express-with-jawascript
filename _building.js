@@ -33,8 +33,8 @@ function BuildApp(paths = []) {
     }
   }
 }
-// fs.rmSync(outputFolder, { force: true })
-fs.mkdirSync(outputFolder)
+fs.rmSync(path.resolve(outputFolder,"output"), { force: true, recursive: true })
+// fs.mkdirSync(outputFolder)
 fs.mkdirSync(path.resolve(outputFolder,"output"))
-fs.writeFileSync(path.resolve(outputFolder,"output","config.json"), JSON.stringify(require("./vercel.json")),"utf-8")
+// fs.writeFileSync(path.resolve(outputFolder,"output","config.json"), JSON.stringify(require("./vercel.json")),"utf-8")
 BuildApp() // Start Build
