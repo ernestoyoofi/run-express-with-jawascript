@@ -1,0 +1,10 @@
+mbutuhaken "express" dadi express
+mbutuhaken "axios" dadi axios
+konstan router iku express.Router()
+
+router.get("/api/gempa", async (req, res) => {
+  konstan data iku await axios.get("https://data.bmkg.go.id/DataMKG/TEWS/autogempa.json")
+  return res.json(data.data)
+})
+
+paketanData router

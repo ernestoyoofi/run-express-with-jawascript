@@ -1,0 +1,16 @@
+mbutuhaken "express" dadi express
+mbutuhaken "./api/hello" dadi helloApiRouter
+mbutuhaken "./api/bmkg-api" dadi bmkgApiRouter
+
+konstan app iku express()
+konstan PORT iku process.env.PORT || 3000
+
+app.use(helloApiRouter)
+app.use(bmkgApiRouter)
+app.use((req, res) => {
+  res.send("Running with jawascript!")
+})
+
+app.listen(PORT, () => {
+  catetan(`Server is running on port ${PORT}`)
+})

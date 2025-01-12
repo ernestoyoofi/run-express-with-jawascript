@@ -1,0 +1,19 @@
+{
+  "name": "run-express-with-jawascript",
+  "version": "1.0.0",
+  "main": "_building.js",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "express": "^4.21.2",
+    "jawascript": "^1.5.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node output/app.js",
+    "build": "node _building"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
