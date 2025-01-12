@@ -3,6 +3,7 @@ const fs = require("fs")
 const path = require("path")
 
 const rootFolder = path.resolve(process.cwd())
+console.log("Root now:", rootFolder)
 function BuildApp(paths = []) {
   const folderScan = path.resolve(rootFolder, ...paths)
   const readfolder = fs.readdirSync(folderScan)
@@ -24,6 +25,7 @@ function BuildApp(paths = []) {
       if([".jawa",".jw"].includes(nameParser.ext)) {
         const readfile = fs.readFileSync(nameToRead,"utf-8")
         const jawaIntoJs = translate(readfile).res
+        console.log("Save To:", path.resolve(nameToSave, `${nameParser.name}.js`))
         fs.writeFileSync(path.resolve(nameToSave, `${nameParser.name}.js`),jawaIntoJs,"utf-8")
       }
     }
