@@ -3,18 +3,20 @@ const fs = require("fs")
 const path = require("path")
 
 const rootFolder = path.resolve(process.cwd())
+const outputFolder = path.resolve(rootFolder, ".vercel")
 console.log("Root now:", rootFolder)
 function BuildApp(paths = []) {
+  console.log("Run...", paths)
   const folderScan = path.resolve(rootFolder, ...paths)
   const readfolder = fs.readdirSync(folderScan)
   for(let name of readfolder) {
     const nameToRead = path.resolve(rootFolder, ...paths, name)
-    const nameToSave = path.resolve(rootFolder, "output", ...paths)
+    const nameToSave = path.resolve(outputFolder, "output", ...paths)
     const nameParser = path.parse(name)
     if(fs.statSync(nameToRead).isDirectory()) {
       // Rootpath
       let ignoreThis = false
-      if(!paths[0] && ["node_modules","output","_next","_cache"].includes(name)) {
+      if(!paths[0] && ["node_modules",".vercel",".git","output","_next","_cache"].includes(name)) {
         ignoreThis = true
       }
       if(!ignoreThis) {
@@ -31,6 +33,8 @@ function BuildApp(paths = []) {
     }
   }
 }
-fs.rmSync(path.resolve(rootFolder,"output"), { force: true, recursive: true })
-fs.mkdirSync(path.resolve(rootFolder,"output"))
+// fs.rmSync(outputFolder, { force: true })
+fs.mkdirSync(outputFolder)
+fs.mkdirSync(path.resolve(outputFolder,"output"))
+fs.writeFileSync(path.resolve(outputFolder,"output","config.json"), JSON.stringify(require("./vercel.json")),"utf-8")
 BuildApp() // Start Build
