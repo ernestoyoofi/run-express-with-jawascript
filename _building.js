@@ -3,7 +3,7 @@ const fs = require("fs")
 const path = require("path")
 
 const rootFolder = path.resolve(process.cwd())
-const outputFolder = path.resolve(rootFolder, ".vercel")
+const outputFolder = path.resolve(process.cwd())
 console.log("Root now:", rootFolder)
 function BuildApp(paths = []) {
   console.log("Run...", paths)
