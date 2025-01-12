@@ -12,7 +12,6 @@
       "dest": "output/app.js"
     }
   ],
-  "scripts": {
-    "build": "npm run build"
-  }
+  "installCommand": "npm install",
+  "buildCommand": "npm run build"
 }
