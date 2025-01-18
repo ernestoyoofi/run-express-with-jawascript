@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="in">
+  <head>
+    <meta charset="UTF-8">
+    <title>Demo (Run On Top Browser)</title>
+    <link href="./style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body style="margin: 0; padding: 0;">
+    <a href="./demo.html" target="_blank" id="demo-viewer-more" style="display: none;" class="p-2 px-3">
+      <p>Open demo in new window?</p>
+    </a>
+    <main class="p-0 md:m-auto max-w-[890px]">
+      <blockquote class="p-3 px-4 mb-2 rounded bg-blue-600 text-white">
+        <p class="text-[0.9rem]">This demo only runs on the browser, does not run on local or in the form of an application, if you want to run with base node.js please install it to the global module, <a target="_blank" href="//github.com/ernestoyoofi/jawascript">check the repository</a></p>
+      </blockquote>
+      <div class="w-full rounded overflow-hidden bg-gray-700 text-white">
+        <h2 class="w-full p-2 px-3 block text-[0.9rem]">Jawascript Editor</h2>
+        <div id="editor" class="w-full min-h-[3px] bg-gray-900 p-2 px-3 rounded text-[0.9rem] text-white" data-fontcode="!" contenteditable>konstan numberOne iku 3<br/>
+konstan numberTwo iku 6 <br/>
+<br/>
+naliko(numberOne luwihSeko numberTwo) { <br/>
+  catetan("Luwih gede") <br/>
+} liyane {<br/>
+  catetan("Luwih cilik")<br/>
+}
+</div>
+      </div>
+      <div class="w-full rounded overflow-hidden bg-gray-700 text-white mt-3">
+        <h2 class="w-full p-2 px-3 block text-[0.9rem]">Javascript Result</h2>
+        <div id="result" class="w-full min-h-[2rem] bg-gray-900 p-2 px-3 rounded text-[0.9rem] text-white" data-fontcode="!">...</div>
+      </div>
+      <div class="mt-3">
+        <button class="p-2 px-4 rounded text-white bg-green-500 shadow-md text-[0.9rem]" id="running">Running Script</button>
+      </div>
+      <div class="w-full rounded overflow-hidden bg-gray-700 text-white mt-3">
+        <h2 class="w-full p-2 px-3 block text-[0.9rem]">Log Message</h2>
+        <pre class="bg-gray-900 p-2 px-3 rounded text-[0.9rem] text-white" id="log" data-fontcode="!">Message log will be in here...</pre>
+      </div>
+    </main>
+    <script>
+      if(new URLSearchParams(location.search).get("documentation")) {
+        document.querySelector('#demo-viewer-more').style.display = "block"
+      }
+    </script>
+    <script src="./demo/defined.js"></script>
+    <script src="./demo/translate.js"></script>
+    <script src="./demo/execute.js"></script>
+  </body>
+</html>

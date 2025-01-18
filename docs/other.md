@@ -1,0 +1,3 @@
+# Other Syntaxs
+
+> Not currently available....

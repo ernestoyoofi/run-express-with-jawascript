@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Doto:wght@100..900&family=Flow+Circular&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans:wdth,wght@87.5,100..900&family=Outfit:wght@600&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  font-family: "Plus Jakarta Sans", serif;
+  box-sizing: border-box;
+}
+
+[data-fontcode] {
+  font-family: "JetBrains Mono", serif;
+}
+#editor {
+  font-family: "JetBrains Mono", serif;
+}
+pre * {
+  font-family: "JetBrains Mono", serif;
+  font-size: 0.9rem;
+}
+
+#next-content h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.67em 0px;
+}
+#next-content h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.67em 0px;
+}
+#next-content h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.67em 0px;
+}
+#next-content h4 {
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin: 0.67em 0px;
+}
+#next-content p {
+  margin: 0.5em 0px;
+}
+#next-content a {
+  color: #2a3fff;
+  text-decoration: underline;
+}
+#next-content div > pre {
+  padding: 4px 12px;
+  background-color: #0d1117;
+  border-radius: 8px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+#next-content div > pre code {
+  background-color: #0d1117;
+}
+#next-content code {
+  padding: 2px 3px;
+  background-color: #dadada;
+}
+#next-content blockquote {
+  margin: 0.5rem 0px;
+  padding: 4px 10px;
+  background-color: #e4e4e4;
+  border-radius: 9px;
+}
