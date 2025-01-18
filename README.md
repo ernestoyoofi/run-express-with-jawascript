@@ -1,5 +1,8 @@
 # Run Express.js with jawascript
 
+> [!NOTE]
+> Projects that have no main direction that might be deleted or no description with archive
+
 You can do this just like normal javascript, since it is built as javascript, currently win can't run js directly in `jawaskrip` command to execute
 
 ## Testing
